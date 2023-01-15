@@ -1,0 +1,196 @@
+.donate {
+  margin: 50px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.donate_card_container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0px;
+  flex-wrap: wrap;
+}
+.progress_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 69%;
+  margin-top: 2px;
+}
+.progress_info_raised {
+  font-family: var(--third_font);
+  font-size: 12px;
+  color: black;
+}
+.progress_info_target {
+  font-family: var(--primary_font);
+  font-size: 14px;
+  color: var(--secondary_color);
+}
+.donate_card {
+  flex-shrink: 0;
+  width: 30%;
+  height: auto;
+  box-sizing: border-box;
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+  padding: 0px 0px 30px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.category {
+  position: absolute;
+  padding: 05px 25px;
+  border-radius: 25px;
+  background-color: var(--primary_color);
+  top: 40%;
+  left: 07%;
+  z-index: 10;
+  font-family: var(--secondary_font);
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+}
+.donate_card_image {
+  height: 300px;
+  width: 100%;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.donate_card :hover .donate_overlay {
+  top: 0%;
+}
+.donate_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  background-color: #0000009e;
+  transition: 550ms all linear;
+}
+.donate_card :hover .donate_overlay {
+  top: 0%;
+  transition: 550ms all linear;
+}
+
+.donate_image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.donate_card_title {
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: black;
+  width: 80%;
+  margin: auto;
+  padding: 10px 20px 0px 20px;
+}
+.donate_card_desc {
+  padding: 0px 20px;
+  width: 80%;
+  margin: auto;
+}
+.progress_bar {
+  width: 80%;
+  margin: auto;
+  height: 80px;
+  border-radius: 25px;
+  background-color: #f9f4e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+progress {
+  width: 70%;
+  height: 7px;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+}
+.progressbar_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.progressbar_strong {
+  font-family: var(--third_font);
+  font-size: 14px;
+}
+#file::after {
+  content: "36%";
+  position: absolute;
+  left: 54px;
+  bottom: 11px;
+  color: var(--secondary_color);
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+/* #file::before {
+  content: "Raised";
+  position: absolute;
+  left: 54px;
+  bottom: -25px;
+  color: var(--secondary_color);
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 700;
+} */
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 7px;
+  position: relative;
+}
+progress::-webkit-progress-value {
+  background-color: var(--secondary_color);
+  border-radius: 5px;
+  height: 7px;
+  position: relative;
+}
+progress::-moz-progress-bar {
+  background-color: var(--secondary_color);
+  border-radius: 5px;
+  height: 7px;
+  position: relative;
+}
+.w {
+  width: 60%;
+  margin: auto;
+}
+
+@media (max-width: 1026px) {
+  .w {
+    width: 80%;
+  }
+  .donate_card_container {
+    flex-direction: column;
+    width: 90%;
+  }
+  .donate_card {
+    width: 100%;
+  }
+}

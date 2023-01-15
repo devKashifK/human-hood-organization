@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* caveat-regular - latin */
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 400;
+
+  src: url("./fonts/caveat-v17-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/caveat-v17-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/caveat-v17-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/caveat-v17-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./fonts/caveat-v17-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("./fonts/caveat-v17-latin-regular.svg")
+      format("svg"); /* Legacy iOS */
+}
+/* nunito-regular - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/nunito-v24-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/nunito-v24-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/nunito-v24-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/nunito-v24-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./fonts/nunito-v24-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/nunito-v24-latin-regular.svg#Nunito") format("svg"); /* Legacy iOS */
+}
+/* manrope-regular - latin */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/manrope-v13-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/manrope-v13-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/manrope-v13-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/manrope-v13-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./fonts/manrope-v13-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/manrope-v13-latin-regular.svg#Manrope") format("svg"); /* Legacy iOS */
+}
+
+:root {
+  --primary_font: "Nunito";
+  --secondary_font: "Caveat";
+  --third_font: "Manrope";
+  --primary_color: #fbd45a;
+  --secondary_color: #00715d;
+  --third_color: #283734;
+  --fourth_color: #f9f4e8;
+}
+
+span {
+  font-family: var(--secondary_font);
+  color: white;
+}
+
+p {
+  font-family: var(--third_font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary_font);
+  color: white;
+  margin: 0;
+}
+strong {
+  color: var(--primary_color);
+}
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: var(--primary_font);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.f_c {
+  display: flex;
+  flex-direction: column;
+}
+.f_r {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  list-style: none;
+}
+.normal_strong {
+  font-family: var(--primary_font);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 34px;
+}
+.m-20 {
+  margin: 20px 0px 0px 0px;
+}
+.margin {
+  margin-top: -100px;
+}
+
+button {
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-family: var(--third_font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 05px;
+  cursor: pointer;
+}
+a:hover {
+  color: var(--primary_color);
+}
+
+.title{
+    font-family: var(--primary_font);
+    color: var(--third_color);
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-top: 6px;
+    text-align: left;
+}
+@media (max-width: 1026px) {
+  a {
+    color: white !important;
+  }
+  .title{
+    font-family: var(--primary_font);
+    color: var(--third_color);
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-top: 6px;
+    text-align: left;
+}
+}

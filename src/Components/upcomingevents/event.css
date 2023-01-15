@@ -1,0 +1,181 @@
+.events {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--fourth_color);
+  margin: auto;
+  padding: 50px 0px;
+}
+.event_container {
+  width: 86%;
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: auto;
+  position: relative;
+  padding: 90px 0px;
+}
+.nav_btn {
+  position: absolute;
+  bottom: 3px;
+  right: 2%;
+  z-index: 12;
+  height: 35px;
+  top: 89%;
+  width: 120px;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  color: black;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+.left:hover {
+  background-color: var(--secondary_color);
+  border: 1px solid var(--secondary_color);
+  color: white;
+}
+.right {
+  color: black;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+.right:hover {
+  background-color: var(--secondary_color);
+  border: 1px solid var(--secondary_color);
+  color: white;
+}
+.event_box_1 {
+  width: 30%;
+  margin-left: 20px;
+}
+.event_box_2 {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  gap: 25px;
+  scrollbar-width: none;
+  transition: 250ms all linear;
+}
+.event_box_2::-webkit-scrollbar {
+  display: none;
+}
+.description_event {
+  font-size: 16px;
+  margin-right: 83px;
+  color: #707876;
+  margin-bottom: 25px;
+}
+.event_card {
+  width: 270px;
+  height: 355px;
+  border-radius: 15px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.event_car_image_holder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: 150ms all linear;
+}
+.event_card:hover .event_car_image_holder {
+  transform: scale(1.2);
+  transition: 150ms all linear;
+}
+.overlay__event {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b0;
+  bottom: -100%;
+  transition: 250ms all linear;
+}
+.event_card:hover .overlay__event {
+  bottom: 0%;
+  transition: 250ms all linear;
+}
+.event_date {
+  background-color: var(--primary_color);
+  position: absolute;
+  top: 05%;
+  right: 8%;
+  padding: 5px 10px;
+  border-radius: 25px;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+.event_info {
+  position: absolute;
+  bottom: 9%;
+  left: 9%;
+}
+.event_icon_address {
+  display: flex;
+  gap: 5px;
+  margin-left: -46px;
+  margin-bottom: 2px;
+}
+.event_icon {
+  color: var(--primary_color);
+}
+.event_address {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.event_title {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 28px;
+}
+@media (max-width: 1026px) {
+  .event_container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .nav_btn {
+    top: 91%;
+  }
+  .event_box_1 {
+    width: 100%;
+  }
+  .event_box_2 {
+    width: 100%;
+  }
+  .event_card {
+    width: 100%;
+    height: 330px;
+  }
+}
