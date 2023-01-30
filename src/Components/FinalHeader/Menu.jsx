@@ -18,7 +18,6 @@ import { AboutMenu, JoinUs, VolunteerMenuData, WorkMenu } from "./dropdown";
 
 export default function Menu() {
   // eslint-disable-next-line no-unused-vars
-  const { page, setPage } = useContext(AppContext);
   const [mobile, setMobile] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const [Whoweare, setWhoweare] = useState(false);
@@ -79,74 +78,99 @@ export default function Menu() {
             <NavLink to="/"> Home</NavLink>{" "}
           </li>
 
-          <li className="realative">
+          <li className="realative whoWeAre">
             {" "}
             <p
               className="dropdown_title"
-              onClick={() => setWhoweare(!Whoweare)}
             >
               {" "}
               Who We Are <MdOutlineArrowDropDown />{" "}
             </p>
-            <div className={Whoweare ? "dropdown dropdown_show" : "dropdown"}>
-              {AboutMenu.map((item) => {
-                return (
-                  <Link className="dropdown_links" to={item.path} key={item.id}>
-                    {item.name} <BsArrowRight />
+            <div className= "dropdown">
+                  <Link className="dropdown_links" to="/about" >
+                    About Us <BsArrowRight />
                   </Link>
-                );
-              })}
+                  <Link className="dropdown_links" to="/vision" >
+                  Vision <BsArrowRight />
+                  </Link>
+                  <Link className="dropdown_links" to="/teams" >
+                  Our Team <BsArrowRight />
+                  </Link>
+                  <Link className="dropdown_links" to="/work" >
+                  Our Work <BsArrowRight />
+                  </Link>
+                  <Link className="dropdown_links" to="/impact" >
+                  Our Impact <BsArrowRight />
+                  </Link>
+                  <Link className="dropdown_links" to="/causes" >
+                  Our Causes <BsArrowRight />
+                  </Link>
+                 
             </div>
           </li>
-          <li className="realative">
+          <li className="realative whoWeAre">
             {" "}
-            <p className="dropdown_title" onClick={() => setWork(!Work)}>
+            <p className="dropdown_title" >
               {" "}
               Our Work <MdOutlineArrowDropDown />{" "}
             </p>
-            <div className={Work ? "dropdown dropdown_show" : "dropdown"}>
-              {WorkMenu.map((item) => {
-                return (
-                  <Link className="dropdown_links" to={item.path} key={item.id}>
-                    {item.name} <BsArrowRight />
+            <div className= "dropdown">
+              
+                  <Link className="dropdown_links" to="/work/health">
+                  Health <BsArrowRight />
                   </Link>
-                );
-              })}
+                  <Link className="dropdown_links" to="/work/relief">
+                  Relief <BsArrowRight />
+                  </Link>
+                  <Link className="dropdown_links" to="/work/livelihood">
+                  Livelihood <BsArrowRight />
+                  </Link>
+                  <Link className="dropdown_links" to="/work/education">
+                  Education <BsArrowRight />
+                  </Link>
+                  <Link className="dropdown_links" to="/work/covid">
+                  Covid <BsArrowRight />
+                  </Link>
+                
             </div>
           </li>
-          <li className="realative">
+          <li className="realative whoWeAre">
             {" "}
-            <p className="dropdown_title" onClick={() => setJoin(!join)}>
+            <p className="dropdown_title" >
               {" "}
               Join Us <MdOutlineArrowDropDown />{" "}
             </p>
-            <div className={join ? "dropdown dropdown_show" : "dropdown"}>
-              {JoinUs.map((item) => {
-                return (
-                  <Link className="dropdown_links" to={item.path} key={item.id}>
-                    {item.name} <BsArrowRight />
+            <div className="dropdown">
+             
+                  <Link className="dropdown_links" to="/joinus/individual" >
+                  Individual <BsArrowRight />
                   </Link>
-                );
-              })}
+                  <Link className="dropdown_links" to="/joinus/cooperration" >
+                  Cooperration <BsArrowRight />
+                  </Link>
+                  <Link className="dropdown_links" to="/joinus/campaign" >
+                  Campaign <BsArrowRight />
+                  </Link>
+             
             </div>
           </li>
-          <li className="realative">
+          <li className="realative whoWeAre">
             {" "}
             <p
               className="dropdown_title"
-              onClick={() => setVolunteer(!volunteer)}
+              
             >
-              {" "}
+      
               Volunteer <MdOutlineArrowDropDown />{" "}
             </p>
-            <div className={volunteer ? "dropdown dropdown_show" : "dropdown"}>
-              {VolunteerMenuData.map((item) => {
-                return (
-                  <Link className="dropdown_links" to={item.path} key={item.id}>
-                    {item.name} <BsArrowRight />
+            <div className="dropdown">
+                  <Link className="dropdown_links" to="/volunteer/ourvolunteers" >
+                  Our Volunteers <BsArrowRight />
                   </Link>
-                );
-              })}
+                  <Link className="dropdown_links" to="/volunteer/becomeavolunteer" >
+                  Become a Volunteer <BsArrowRight />
+                  </Link>
+                
             </div>
           </li>
           <li>

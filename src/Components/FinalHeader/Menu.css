@@ -91,14 +91,21 @@ strong {
   width: 190px;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  top: 70%;
+  top: 099%;
   display: none;
+  height: 0;
+  transition: 250ms all linear;
 }
 .dropdown_show {
   display: flex;
 }
 .realative {
   position: relative;
+}
+.whoWeAre:hover .dropdown{
+  display: flex;
+  height: max-content;
+  transition: 250ms all linear;
 }
 .dropdown_title {
   font-size: 16px;
@@ -233,12 +240,12 @@ strong {
     background: #283734;
     flex-direction: column;
     padding: 50px 0px 0px 50px;
-    width: 70%;
+    width: 80%;
     left: -100%;
     gap: 50px;
     height: 100vh;
     top: 0;
-    display: flex;
+    display: none;
     transition: 750ms all linear;
     padding-left: 85px;
   }
